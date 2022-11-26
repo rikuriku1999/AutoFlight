@@ -6,8 +6,18 @@ import time
 import threading
 
 place_list = [
-    "ROHH",
-
+    "RJCO",
+    "RJCC",
+    "RJNA",
+    "RJGG",
+    "RJFU",
+    "RJDA",
+    "RJOC",
+    "RJOH",
+    "RJOY",
+    "RJBE",
+    "RJFF",
+    "RJSF"
 ]
 
 visibility =[
