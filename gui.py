@@ -37,7 +37,8 @@ def scheduler(interval, f, wait = True):
         time.sleep(next_time)
         setting_condition()
 
-# scheduler(1, shot, False)
+scheduler(1, shot, False)
 
-positioning()
+# positioning()
+
  
