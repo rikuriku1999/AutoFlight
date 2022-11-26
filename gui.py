@@ -17,18 +17,23 @@ visibility =[
 ]
 
 def shot():
-    pg.moveTo(500, 1600)
+    # pg.moveTo(500, 1600)
     # print(pg.size())
     # pg.click()
     # pg.click(button="left", clicks=3, interval=0.5)
     dt_now = datetime.datetime.now()
-    screen_shot = pg.screenshot()
+    screen_shot = pg.screenshot(region=(0,0,5760,1080))
     screen_shot.save('screen_shot/'+ str(dt_now.hour) +str(dt_now.second) + str(dt_now.microsecond) + '.png')
 
 def setting_condition():
-    pg.click()
-    pg.click(button="left", clicks=3, interval=0.5)
-    pg.press("down")
+    pg.click(-3000,400)
+    # pg.click(button="left", clicks=3, interval=0.5)
+    for i in range(10):
+        pg.press("up") 
+    # for i in range(12):
+    #     pg.press("right")
+    for i in range(3):
+        pg.press(".")
 
 def positioning():
     while True:
@@ -84,8 +89,9 @@ def beforeFlight(place,visib):
 
 # scheduler(1, shot, False)
 
-beforeFlight("NAHA", 20)
+# beforeFlight("NAHA", "20")
 
+setting_condition()
 
 # positioning()
 
