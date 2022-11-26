@@ -20,7 +20,10 @@ def setting_condition():
     pg.click(button="left", clicks=3, interval=0.5)
     pg.press("down")
 
-
+def positioning():
+    while True:
+        x=input("取得したい箇所にカーソルを当てEnterキー押してください\n")
+        print(pg.position())
 
 def scheduler(interval, f, wait = True):
     base_time = time.time()
@@ -34,5 +37,7 @@ def scheduler(interval, f, wait = True):
         time.sleep(next_time)
         setting_condition()
 
-scheduler(1, shot, False)
+# scheduler(1, shot, False)
+
+positioning()
  
