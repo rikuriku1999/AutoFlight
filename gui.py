@@ -20,11 +20,7 @@ place_list = [
     "RJSF"
 ]
 
-visibility =[
-    20,
-    30,
-
-]
+visibility =[0, 1, 2, 3, 5, 8, 10, 15, 20, 30, 40, 50, 70, 100]
 
 def shot():
     # pg.moveTo(500, 1600)
@@ -40,9 +36,9 @@ def setting_condition():
     # pg.click(button="left", clicks=3, interval=0.5)
     for i in range(10):
         pg.press("up") 
-    # for i in range(12):
-    #     pg.press("right")
-    for i in range(3):
+    for i in range(12):
+        pg.press("right")
+    for i in range(9):
         pg.press(".")
 
 def positioning():
